@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Front End Trials</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph. MT</p>
-        <p>MT</p>
-    </body>
+<head>
+    <title>Frontend Web Page</title>
+    <script>
+        // Function to make an HTTP GET request to the backend and display the response
+        function fetchData() {
+            fetch('http://localhost:8080/hello') // Replace with the appropriate URL of your backend API endpoint
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').textContent = data;
+                })
+                .catch(error => console.log(error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Frontend Web Page</h1>
+    
+    <button onclick="fetchData()">Fetch Data</button>
+    
+    <div id="result"></div>
+</body>
 </html>
