@@ -5,7 +5,7 @@
     <script>
         // Function to make an HTTP GET request to the backend and display the response
         function fetchData() {
-            fetch('http://localhost:8080/hello') // Replace with the appropriate URL of your backend API endpoint
+            fetch('http://3.231.185.51/hello')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('result').textContent = data;
